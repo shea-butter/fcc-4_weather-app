@@ -1,3 +1,4 @@
+// 
 var tempState = 'F';
 var temperature = 0;
 var data;
