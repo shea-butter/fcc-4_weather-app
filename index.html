@@ -1,28 +1,160 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>GitHub Fun!</title>
-</head>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Weather App</title>
+		<meta name="description" content="See your local weather or search weather by location or zip code.">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<body>
+		<link rel="stylesheet" href="styles/css/main.css">
 
-<div>
-	<div>
-		<img id="weather-icon" src/>
-	</div>
-	<div>
-		<h1>
-			<strong id="temp"></strong><sup>&deg;<span id="degreeType">F</span></sup>
-		</h1>
-		<button onclick="toggleTempType()">to Celsius</button>
-	</div>
-	<div>
-		<span id="weather-main"></span>, <span id="weather-details"></span>
-	</div>
-</div>
+		<!--<script src="js/vendor/modernizr-2.8.3.min.js"></script>-->
+	</head>
 
+	<body>
 
-<pre id="ajax"></pre>
-<script type="text/javascript" src="js/scripts.js"></script>
-</body>
+		<main>
+
+			<div class="current">
+
+				<div class="day0">
+
+					<div class="locale">
+						<h1>Location</h1>
+						<p class="lat"></p>
+						<p class="long"></p>
+					</div>
+
+					<div class="day0-icon">
+						<img class="day0-weatherIcon" src="#"/>
+					</div>
+
+					<div class="day0-temp">
+						<h1>
+							<strong class="day0-degrees"></strong><sup>&deg;<span class="degreeType">F</span></sup>
+						</h1>
+
+						<button class="convert" onclick="weatherApp.toggleTempType()">Convert to &deg;C</button>
+					</div>
+
+					<div class="day0-conditions">
+						<span class="day0-weatherMain"></span>, <span class="day0-weatherDetails"></span>
+					</div>
+
+				</div>
+
+			</div>
+
+			<!--<div class="forcast">
+
+				<div class="day1">
+
+					<div class="icon">
+						<img class="weather-icon" src="#"/>
+					</div>
+
+					<div class="temperature">
+						<h1>
+							<strong class="degrees"></strong><sup>&deg;<span class="degreeType">F</span></sup>
+						</h1>
+
+						<button class="convert" onclick="weatherApp.toggleTempType()">Convert to &deg;C</button>
+					</div>
+
+					<div class="conditions">
+						<span class="weather-main"></span>, <span class="weather-details"></span>
+					</div>
+
+				</div>
+
+				<div class="day2">
+
+					<div class="icon">
+						<img class="weather-icon" src="#"/>
+					</div>
+
+					<div class="temperature">
+						<h1>
+							<strong class="degrees"></strong><sup>&deg;<span class="degreeType">F</span></sup>
+						</h1>
+
+						<button class="convert" onclick="weatherApp.toggleTempType()">Convert to &deg;C</button>
+					</div>
+
+					<div class="conditions">
+						<span class="weather-main"></span>, <span class="weather-details"></span>
+					</div>
+
+				</div>
+
+				<div class="day3">
+
+					<div class="icon">
+						<img class="weather-icon" src="#"/>
+					</div>
+
+					<div class="temperature">
+						<h1>
+							<strong class="degrees"></strong><sup>&deg;<span class="degreeType">F</span></sup>
+						</h1>
+
+						<button class="convert" onclick="weatherApp.toggleTempType()">Convert to &deg;C</button>
+					</div>
+
+					<div class="conditions">
+						<span class="weather-main"></span>, <span class="weather-details"></span>
+					</div>
+
+				</div>
+
+				<div class="day4">
+
+					<div class="icon">
+						<img class="weather-icon" src="#"/>
+					</div>
+
+					<div class="temperature">
+						<h1>
+							<strong class="degrees"></strong><sup>&deg;<span class="degreeType">F</span></sup>
+						</h1>
+
+						<button class="convert" onclick="weatherApp.toggleTempType()">Convert to &deg;C</button>
+					</div>
+
+					<div class="conditions">
+						<span class="weather-main"></span>, <span class="weather-details"></span>
+					</div>
+
+				</div>
+
+				<div class="day5">
+
+					<div class="icon">
+						<img class="weather-icon" src="#"/>
+					</div>
+
+					<div class="temperature">
+						<h1>
+							<strong class="degrees"></strong><sup>&deg;<span class="degreeType">F</span></sup>
+						</h1>
+
+						<button class="convert" onclick="weatherApp.toggleTempType()">Convert to &deg;C</button>
+					</div>
+
+					<div class="conditions">
+						<span class="weather-main"></span>, <span class="weather-details"></span>
+					</div>
+
+				</div>
+
+			</div>-->
+
+		</main>
+
+		<pre class="ajax"></pre>
+
+		<script type="text/javascript" src="js/script.js"></script>
+
+	</body>
+
 </html>

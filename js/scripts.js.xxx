@@ -1,0 +1,139 @@
+const weatherApp = {
+	data: null,
+	geoWarning: null,
+
+	getLocation() {
+		navigator.geolocation
+		? navigator.geolocation.getCurrentPosition(this.setPosition)
+		: this.geoWarning = `Geolocation is not supported by this browser. Please download a real one!`;
+	},
+
+	kelvinToC(degreesKelvin) {
+		return degreesKelvin - 273.15;
+	},
+
+	kelvinToF(degreesKelvin) {
+		return (degreesKelvin * (9 / 5)) - 459.67;
+	},
+
+	lat: null,
+	location: null,
+	long: null,
+
+	setPosition(position) {
+		this.lat = position.coords.latitude;
+		this.long = position.coords.longitude;
+		this.location = `${this.lat},${this.long}`;
+	},
+
+	tempState: `F`,
+	temperature: 0,
+
+	toggleTempType() {
+		const convert = document.querySelector(`.convert`);
+
+		if (this.tempState === `C`) {
+			this.temperature = this.kelvinToF(this.data.main.temp);
+			this.tempState = `F`;
+			convert.innerHTML = `Convert to &deg;C`;
+		} else {
+			this.temperature = this.kelvinToC(this.data.main.temp);
+			this.tempState = `C`;
+			convert.innerHTML = `Convert to &deg;F`;
+		}
+
+		this.updateTemp();
+	},
+
+	updateTemp() {
+		const degrees = document.querySelector(`.degrees`);
+		const degreeType = document.querySelector(`.degreeType`);
+
+		degrees.innerHTML = this.temperature.toFixed(0);
+		degreeType.innerHTML = this.tempState;
+	},
+
+	xhr: new XMLHttpRequest(),
+
+};
+
+console.clear();
+
+weatherApp.xhr.onreadystatechange = function() {
+	// 4 means we recieved the response
+	if (weatherApp.xhr.readyState === 4) {
+		weatherApp.data = JSON.parse(weatherApp.xhr.responseText);
+
+		document.querySelector(`.weather-main`).innerHTML = weatherApp.data.weather[0].main;
+		document.querySelector(`.weather-details`).innerHTML = `(${weatherApp.data.weather[0].description})`;
+
+		const icon = `http://openweathermap.org/img/w/${weatherApp.data.weather[0].icon}.png`;
+
+		document.querySelector(`.weather-icon`).src = icon;
+
+		document.querySelector(`.ajax`).innerHTML = JSON.stringify(weatherApp.data, null, 4);
+
+		weatherApp.temperature = weatherApp.kelvinToF(weatherApp.data.main.temp);
+		weatherApp.updateTemp();
+	}
+};
+
+weatherApp.getLocation();
+
+weatherApp.setPosition();
+
+weatherApp.xhr.open(`GET`, `https://crossorigin.me/https://api.darksky.net/forecast/65cc4dd82c26354c89ebb5cf14e4bca9/${weatherApp.location}`);
+
+// weatherApp.xhr.open(`GET`, `http://api.openweathermap.org/data/2.5/weather?zip=75093&appid=bcc318753fc77300a6a78da4d915f6bd`); // current
+
+// weatherApp.xhr.open(`GET`, `http://api.openweathermap.org/data/2.5/forecast?id=75093&appid=bcc318753fc77300a6a78da4d915f6bd`); // 5 day forcast
+
+// weatherApp.xhr.open(`GET`,`https://api.openweathermap.org/data/2.5/forcast?lat=35&lon=139&callback=test&appid=bcc318753fc77300a6a78da4d915f6bd`);
+
+weatherApp.xhr.send();
+
+console.log(weatherApp.xhr);
+
+// {
+// 	"coord": {
+// 		"lon": -96.79,
+// 		"lat": 33.03
+// 	},
+// 	"weather": [
+// 		{
+// 			"id": 800,
+// 			"main": "Clear",
+// 			"description": "clear sky",
+// 			"icon": "02n"
+// 		}
+// 	],
+// 	"base": "stations",
+// 	"main": {
+// 		"temp": 304.74,
+// 		"pressure": 1003,
+// 		"humidity": 35,
+// 		"temp_min": 303.15,
+// 		"temp_max": 306.15
+// 	},
+// 	"visibility": 19312,
+// 	"wind": {
+// 		"speed": 8.7,
+// 		"deg": 180,
+// 		"gust": 15.4
+// 	},
+// 	"clouds": {
+// 		"all": 5
+// 	},
+// 	"dt": 1495759620,
+// 	"sys": {
+// 		"type": 1,
+// 		"id": 2596,
+// 		"message": 0.0043,
+// 		"country": "US",
+// 		"sunrise": 1495797682,
+// 		"sunset": 1495848448
+// 	},
+// 	"id": 0,
+// 	"name": "Plano",
+// 	"cod": 200
+// }
