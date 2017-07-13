@@ -15,139 +15,112 @@
 
 		<main>
 
+			<div class="locale">
+
+				<h1 class="location"></h1>
+
+				<div class="currentIcon">
+					<img class="currentWeatherIcon" src="#"/>
+				</div>
+
+				<div class="currentTemp">
+					<h1>
+						<strong class="currentDegrees"></strong><sup>&deg;<span class="degreeType">F</span></sup>
+					</h1>
+					<p>
+						<span class="feelslike"></span>
+						<sup>&deg;<span class="degreeType">F</span></sup>
+					</p>
+					<p class="conditions"></p>
+				</div>
+
+				<button class="convert" onclick="weatherApp.toggleTempType()">Convert to &deg;C (Metric)</button>
+
+			</div>
+
 			<div class="current">
 
-				<div class="day0">
+				<div class="readings">
 
-					<div class="locale">
-						<h1>Location</h1>
-						<p class="lat"></p>
-						<p class="long"></p>
+					<div class="flex-row1">
+						<p class="latitude"></p>
+						<p class="longitude"></p>
 					</div>
 
-					<div class="day0-icon">
-						<img class="day0-weatherIcon" src="#"/>
+					<div class="flex-row2">
+						<p class="elevation"></p>
+						<p class="visibility"></p>
 					</div>
 
-					<div class="day0-temp">
-						<h1>
-							<strong class="day0-degrees"></strong><sup>&deg;<span class="degreeType">F</span></sup>
-						</h1>
-
-						<button class="convert" onclick="weatherApp.toggleTempType()">Convert to &deg;C</button>
+					<div class="flex-row3">
+						<p class="precipitation"></p>
+						<p class="pressure"></p>
 					</div>
 
-					<div class="day0-conditions">
-						<span class="day0-weatherMain"></span>, <span class="day0-weatherDetails"></span>
+					<div class="flex-row4">
+						<p class="humidity"></p>
+						<p>
+							<span class="dewpoint"></span>
+							<sup>&deg;<span class="degreeType">F</span></sup>
+						</p>
+					</div>
+
+					<div class="flex-row5">
+						<p class="wind"></p>
+						<p>
+							<span class="windchill"></span>
+							<sup>&deg;<span class="degreeType">F</span></sup>
+						</p>
 					</div>
 
 				</div>
 
 			</div>
 
-			<!--<div class="forcast">
+			<div class="search">
 
-				<div class="day1">
+				<form name="searchForm" action="javascript: false";>
+					<input type="search" name="searchBox" />
+					<input type="submit" name="submitButton" onclick="weatherApp.setWeather()" />
+				</form>
 
-					<div class="icon">
-						<img class="weather-icon" src="#"/>
-					</div>
+				<div class="searchRules">
 
-					<div class="temperature">
-						<h1>
-							<strong class="degrees"></strong><sup>&deg;<span class="degreeType">F</span></sup>
-						</h1>
+					<p>
+						You can search for a specific location above.
+						Use one of the following formats:
+					</p>
 
-						<button class="convert" onclick="weatherApp.toggleTempType()">Convert to &deg;C</button>
-					</div>
-
-					<div class="conditions">
-						<span class="weather-main"></span>, <span class="weather-details"></span>
-					</div>
-
-				</div>
-
-				<div class="day2">
-
-					<div class="icon">
-						<img class="weather-icon" src="#"/>
-					</div>
-
-					<div class="temperature">
-						<h1>
-							<strong class="degrees"></strong><sup>&deg;<span class="degreeType">F</span></sup>
-						</h1>
-
-						<button class="convert" onclick="weatherApp.toggleTempType()">Convert to &deg;C</button>
-					</div>
-
-					<div class="conditions">
-						<span class="weather-main"></span>, <span class="weather-details"></span>
-					</div>
-
-				</div>
-
-				<div class="day3">
-
-					<div class="icon">
-						<img class="weather-icon" src="#"/>
-					</div>
-
-					<div class="temperature">
-						<h1>
-							<strong class="degrees"></strong><sup>&deg;<span class="degreeType">F</span></sup>
-						</h1>
-
-						<button class="convert" onclick="weatherApp.toggleTempType()">Convert to &deg;C</button>
-					</div>
-
-					<div class="conditions">
-						<span class="weather-main"></span>, <span class="weather-details"></span>
-					</div>
+					<ul>
+						<li>
+							US State/City:
+							<br /> CA/San_Francisco
+						</li>
+						<li>
+							US Zipcode:
+							<br /> 60290
+						</li>
+						<li>
+							International Country/City:
+							<br /> Australia/Sydney
+						</li>
+						<li>
+							Latitude,Longitude:
+							<br /> 37.8,-122.4
+						</li>
+						<li>
+							Airport Code:
+							<br /> KJFK
+						</li>
+						<li>
+							Personal Weather Station id:
+							<br /> pws:KCASANFR70
+						</li>
+					</ul>
 
 				</div>
 
-				<div class="day4">
-
-					<div class="icon">
-						<img class="weather-icon" src="#"/>
-					</div>
-
-					<div class="temperature">
-						<h1>
-							<strong class="degrees"></strong><sup>&deg;<span class="degreeType">F</span></sup>
-						</h1>
-
-						<button class="convert" onclick="weatherApp.toggleTempType()">Convert to &deg;C</button>
-					</div>
-
-					<div class="conditions">
-						<span class="weather-main"></span>, <span class="weather-details"></span>
-					</div>
-
-				</div>
-
-				<div class="day5">
-
-					<div class="icon">
-						<img class="weather-icon" src="#"/>
-					</div>
-
-					<div class="temperature">
-						<h1>
-							<strong class="degrees"></strong><sup>&deg;<span class="degreeType">F</span></sup>
-						</h1>
-
-						<button class="convert" onclick="weatherApp.toggleTempType()">Convert to &deg;C</button>
-					</div>
-
-					<div class="conditions">
-						<span class="weather-main"></span>, <span class="weather-details"></span>
-					</div>
-
-				</div>
-
-			</div>-->
+			</div>
 
 		</main>
 
@@ -156,5 +129,10 @@
 		<script type="text/javascript" src="js/script.js"></script>
 
 	</body>
+
+	<footer>
+		<a href="https://icons8.com">Secondary icons by Icons8</a>
+		<a href="https://wunderground.com">Weather and Main Icon by Wunderground</a>
+	</footer>
 
 </html>

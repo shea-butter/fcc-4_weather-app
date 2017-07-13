@@ -1,10 +1,9 @@
-test({
+{
 	"response": {
 		"version": "0.1",
 		"termsofService": "http://www.wunderground.com/weather/api/d/terms.html",
 		"features": {
-			"conditions": 1,
-			"forecast": 1
+			"conditions": 1
 		}
 	},
 	"current_observation": {
@@ -14,460 +13,81 @@ test({
 			"link": "http://www.wunderground.com"
 		},
 		"display_location": {
-			"full": "Baitang, China",
-			"city": "Baitang",
-			"state": "63",
-			"state_name": "China",
-			"country": "CI",
-			"country_iso3166": "CN",
+			"full": "Sydney, Australia",
+			"city": "Sydney",
+			"state": "NSW",
+			"state_name": "Australia",
+			"country": "AU",
+			"country_iso3166": "AU",
 			"zip": "00000",
-			"magic": "1",
-			"wmo": "56029",
-			"latitude": "32.850000",
-			"longitude": "97.120000",
-			"elevation": "3958.1"
+			"magic": "16",
+			"wmo": "94768",
+			"latitude": "-33.86999893",
+			"longitude": "151.21000671",
+			"elevation": "3.0"
 		},
 		"observation_location": {
-			"full": "Yushu, ",
-			"city": "Yushu",
-			"state": "",
-			"country": "China",
-			"country_iso3166": "CN",
-			"latitude": "33.00000000",
-			"longitude": "96.96666718",
-			"elevation": "12195 ft"
+			"full": "Darlinghurst, Darlinghurst, NEW SOUTH WALES",
+			"city": "Darlinghurst, Darlinghurst",
+			"state": "NEW SOUTH WALES",
+			"country": "AU",
+			"country_iso3166": "AU",
+			"latitude": "-33.877773",
+			"longitude": "151.213516",
+			"elevation": "150 ft"
 		},
 		"estimated": {},
-		"station_id": "56029",
-		"observation_time": "Last Updated on June 1, 8:00 AM CST",
-		"observation_time_rfc822": "Thu, 01 Jun 2017 08:00:00 +0800",
-		"observation_epoch": "1496275200",
-		"local_time_rfc822": "Thu, 01 Jun 2017 08:44:10 +0800",
-		"local_epoch": "1496277850",
-		"local_tz_short": "CST",
-		"local_tz_long": "Asia/Shanghai",
-		"local_tz_offset": "+0800",
-		"weather": "Overcast",
-		"temperature_string": "46 F (8 C)",
-		"temp_f": 46,
-		"temp_c": 8,
-		"relative_humidity": "78%",
+		"station_id": "INEWSOUT819",
+		"observation_time": "Last Updated on July 11, 10:18 AM AEST",
+		"observation_time_rfc822": "Tue, 11 Jul 2017 10:18:45 +1000",
+		"observation_epoch": "1499732325",
+		"local_time_rfc822": "Tue, 11 Jul 2017 10:18:48 +1000",
+		"local_epoch": "1499732328",
+		"local_tz_short": "AEST",
+		"local_tz_long": "Australia/Sydney",
+		"local_tz_offset": "+1000",
+		"weather": "Clear",
+		"temperature_string": "53.4 F (11.9 C)",
+		"temp_f": 53.4,
+		"temp_c": 11.9,
+		"relative_humidity": "55%",
 		"wind_string": "Calm",
-		"wind_dir": "",
-		"wind_degrees": 0,
-		"wind_mph": 0,
-		"wind_gust_mph": 0,
+		"wind_dir": "East",
+		"wind_degrees": 89,
+		"wind_mph": 0.2,
+		"wind_gust_mph": "2.5",
 		"wind_kph": 0,
-		"wind_gust_kph": 0,
-		"pressure_mb": "1006.1",
-		"pressure_in": "29.71",
-		"pressure_trend": "+",
-		"dewpoint_string": "41 F (5 C)",
-		"dewpoint_f": 41,
-		"dewpoint_c": 5,
+		"wind_gust_kph": "4.0",
+		"pressure_mb": "1030",
+		"pressure_in": "30.42",
+		"pressure_trend": "0",
+		"dewpoint_string": "38 F (3 C)",
+		"dewpoint_f": 38,
+		"dewpoint_c": 3,
 		"heat_index_string": "NA",
 		"heat_index_f": "NA",
 		"heat_index_c": "NA",
 		"windchill_string": "NA",
 		"windchill_f": "NA",
 		"windchill_c": "NA",
-		"feelslike_string": "46 F (8 C)",
-		"feelslike_f": "46",
-		"feelslike_c": "8",
-		"visibility_mi": "19.0",
-		"visibility_km": "30.0",
-		"solarradiation": "--",
-		"UV": "0",
-		"precip_1hr_string": "0.00 in (0 mm)",
+		"feelslike_string": "53.4 F (11.9 C)",
+		"feelslike_f": "53.4",
+		"feelslike_c": "11.9",
+		"visibility_mi": "6.2",
+		"visibility_km": "10.0",
+		"solarradiation": "139",
+		"UV": "1.0",
+		"precip_1hr_string": "0.00 in ( 0 mm)",
 		"precip_1hr_in": "0.00",
-		"precip_1hr_metric": "0",
-		"precip_today_string": "0.85 in (22 mm)",
-		"precip_today_in": "0.85",
-		"precip_today_metric": "22",
-		"icon": "cloudy",
-		"icon_url": "http://icons.wxug.com/i/c/k/cloudy.gif",
-		"forecast_url": "http://www.wunderground.com/global/stations/56029.html",
-		"history_url": "http://www.wunderground.com/history/airport/56029/2017/6/1/DailyHistory.html",
-		"ob_url": "http://www.wunderground.com/cgi-bin/findweather/getForecast?query=33.00000000,96.96666718",
+		"precip_1hr_metric": " 0",
+		"precip_today_string": "0.00 in (0 mm)",
+		"precip_today_in": "0.00",
+		"precip_today_metric": "0",
+		"icon": "clear",
+		"icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+		"forecast_url": "http://www.wunderground.com/global/stations/94768.html",
+		"history_url": "http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=INEWSOUT819",
+		"ob_url": "http://www.wunderground.com/cgi-bin/findweather/getForecast?query=-33.877773,151.213516",
 		"nowcast": ""
-	},
-	"forecast": {
-		"txt_forecast": {
-			"date": "8:10 AM CST",
-			"forecastday": [
-				{
-					"period": 0,
-					"icon": "chancetstorms",
-					"icon_url": "http://icons.wxug.com/i/c/k/chancetstorms.gif",
-					"title": "Thursday",
-					"fcttext": "Scattered thunderstorms. High around 55F. Winds SW at 5 to 10 mph. Chance of rain 50%.",
-					"fcttext_metric": "Variable clouds with scattered thunderstorms. High 13C. Winds SW at 10 to 15 km/h. Chance of rain 50%.",
-					"pop": "50"
-				},
-				{
-					"period": 1,
-					"icon": "nt_partlycloudy",
-					"icon_url": "http://icons.wxug.com/i/c/k/nt_partlycloudy.gif",
-					"title": "Thursday Night",
-					"fcttext": "Some clouds. Low 36F. Winds SSW at 5 to 10 mph.",
-					"fcttext_metric": "Partly cloudy skies. Low 2C. Winds SSW at 10 to 15 km/h.",
-					"pop": "20"
-				},
-				{
-					"period": 2,
-					"icon": "chancetstorms",
-					"icon_url": "http://icons.wxug.com/i/c/k/chancetstorms.gif",
-					"title": "Friday",
-					"fcttext": "Showers early then scattered thunderstorms developing later in the day. High 56F. Winds WSW at 10 to 15 mph. Chance of rain 60%.",
-					"fcttext_metric": "Showers early then scattered thunderstorms developing later in the day. High 13C. Winds WSW at 15 to 25 km/h. Chance of rain 60%.",
-					"pop": "60"
-				},
-				{
-					"period": 3,
-					"icon": "nt_snow",
-					"icon_url": "http://icons.wxug.com/i/c/k/nt_snow.gif",
-					"title": "Friday Night",
-					"fcttext": "Showers and thundershowers in the evening, with occasional rain, possibly mixed with snow overnight. Low near 35F. Winds light and variable. Chance of precip 100%.",
-					"fcttext_metric": "Showers and thundershowers during the evening, mainly cloudy overnight with periods of rain or snow. Low 1C. Winds light and variable. Chance of precip 100%.",
-					"pop": "100"
-				},
-				{
-					"period": 4,
-					"icon": "chancerain",
-					"icon_url": "http://icons.wxug.com/i/c/k/chancerain.gif",
-					"title": "Saturday",
-					"fcttext": "Showers and thundershowers likely. High 46F. Winds N at 5 to 10 mph. Chance of rain 80%.",
-					"fcttext_metric": "Showers and thundershowers likely. High 8C. Winds N at 10 to 15 km/h. Chance of rain 80%.",
-					"pop": "80"
-				},
-				{
-					"period": 5,
-					"icon": "nt_snow",
-					"icon_url": "http://icons.wxug.com/i/c/k/nt_snow.gif",
-					"title": "Saturday Night",
-					"fcttext": "Cloudy with rain and snow in the evening. Snow showers late. Low 28F. Winds light and variable. Chance of precip 80%.",
-					"fcttext_metric": "Cloudy with rain and snow in the evening. Snow showers late. Low -2C. Winds light and variable. Chance of precip 80%.",
-					"pop": "80"
-				},
-				{
-					"period": 6,
-					"icon": "chancerain",
-					"icon_url": "http://icons.wxug.com/i/c/k/chancerain.gif",
-					"title": "Sunday",
-					"fcttext": "Showers in the morning, then partly cloudy in the afternoon. High 44F. Winds WNW at 10 to 15 mph. Chance of rain 40%.",
-					"fcttext_metric": "Showers in the morning, then partly cloudy in the afternoon. High 7C. Winds WNW at 15 to 25 km/h. Chance of rain 40%.",
-					"pop": "40"
-				},
-				{
-					"period": 7,
-					"icon": "nt_clear",
-					"icon_url": "http://icons.wxug.com/i/c/k/nt_clear.gif",
-					"title": "Sunday Night",
-					"fcttext": "A mostly clear sky. Low 28F. Winds light and variable.",
-					"fcttext_metric": "A mostly clear sky. Low -2C. Winds light and variable.",
-					"pop": "0"
-				}
-			]
-		},
-		"simpleforecast": {
-			"forecastday": [
-				{
-					"date": {
-						"epoch": "1496322000",
-						"pretty": "9:00 PM CST on June 01, 2017",
-						"day": 1,
-						"month": 6,
-						"year": 2017,
-						"yday": 151,
-						"hour": 21,
-						"min": "00",
-						"sec": 0,
-						"isdst": "0",
-						"monthname": "June",
-						"monthname_short": "Jun",
-						"weekday_short": "Thu",
-						"weekday": "Thursday",
-						"ampm": "PM",
-						"tz_short": "CST",
-						"tz_long": "Asia/Shanghai"
-					},
-					"period": 1,
-					"high": {
-						"fahrenheit": "55",
-						"celsius": "13"
-					},
-					"low": {
-						"fahrenheit": "36",
-						"celsius": "2"
-					},
-					"conditions": "Chance of a Thunderstorm",
-					"icon": "chancetstorms",
-					"icon_url": "http://icons.wxug.com/i/c/k/chancetstorms.gif",
-					"skyicon": "",
-					"pop": 50,
-					"qpf_allday": {
-						"in": 0.05,
-						"mm": 1
-					},
-					"qpf_day": {
-						"in": 0.05,
-						"mm": 1
-					},
-					"qpf_night": {
-						"in": 0.00,
-						"mm": 0
-					},
-					"snow_allday": {
-						"in": 0.0,
-						"cm": 0.0
-					},
-					"snow_day": {
-						"in": 0.0,
-						"cm": 0.0
-					},
-					"snow_night": {
-						"in": 0.0,
-						"cm": 0.0
-					},
-					"maxwind": {
-						"mph": 10,
-						"kph": 16,
-						"dir": "SW",
-						"degrees": 236
-					},
-					"avewind": {
-						"mph": 6,
-						"kph": 10,
-						"dir": "SW",
-						"degrees": 236
-					},
-					"avehumidity": 75,
-					"maxhumidity": 0,
-					"minhumidity": 0
-				},
-				{
-					"date": {
-						"epoch": "1496408400",
-						"pretty": "9:00 PM CST on June 02, 2017",
-						"day": 2,
-						"month": 6,
-						"year": 2017,
-						"yday": 152,
-						"hour": 21,
-						"min": "00",
-						"sec": 0,
-						"isdst": "0",
-						"monthname": "June",
-						"monthname_short": "Jun",
-						"weekday_short": "Fri",
-						"weekday": "Friday",
-						"ampm": "PM",
-						"tz_short": "CST",
-						"tz_long": "Asia/Shanghai"
-					},
-					"period": 2,
-					"high": {
-						"fahrenheit": "56",
-						"celsius": "13"
-					},
-					"low": {
-						"fahrenheit": "35",
-						"celsius": "2"
-					},
-					"conditions": "Chance of a Thunderstorm",
-					"icon": "chancetstorms",
-					"icon_url": "http://icons.wxug.com/i/c/k/chancetstorms.gif",
-					"skyicon": "",
-					"pop": 60,
-					"qpf_allday": {
-						"in": 0.62,
-						"mm": 16
-					},
-					"qpf_day": {
-						"in": 0.14,
-						"mm": 4
-					},
-					"qpf_night": {
-						"in": 0.47,
-						"mm": 12
-					},
-					"snow_allday": {
-						"in": 0.0,
-						"cm": 0.0
-					},
-					"snow_day": {
-						"in": 0.0,
-						"cm": 0.0
-					},
-					"snow_night": {
-						"in": 0.0,
-						"cm": 0.0
-					},
-					"maxwind": {
-						"mph": 15,
-						"kph": 24,
-						"dir": "WSW",
-						"degrees": 240
-					},
-					"avewind": {
-						"mph": 11,
-						"kph": 18,
-						"dir": "WSW",
-						"degrees": 240
-					},
-					"avehumidity": 71,
-					"maxhumidity": 0,
-					"minhumidity": 0
-				},
-				{
-					"date": {
-						"epoch": "1496494800",
-						"pretty": "9:00 PM CST on June 03, 2017",
-						"day": 3,
-						"month": 6,
-						"year": 2017,
-						"yday": 153,
-						"hour": 21,
-						"min": "00",
-						"sec": 0,
-						"isdst": "0",
-						"monthname": "June",
-						"monthname_short": "Jun",
-						"weekday_short": "Sat",
-						"weekday": "Saturday",
-						"ampm": "PM",
-						"tz_short": "CST",
-						"tz_long": "Asia/Shanghai"
-					},
-					"period": 3,
-					"high": {
-						"fahrenheit": "46",
-						"celsius": "8"
-					},
-					"low": {
-						"fahrenheit": "28",
-						"celsius": "-2"
-					},
-					"conditions": "Chance of Rain",
-					"icon": "chancerain",
-					"icon_url": "http://icons.wxug.com/i/c/k/chancerain.gif",
-					"skyicon": "",
-					"pop": 80,
-					"qpf_allday": {
-						"in": 0.31,
-						"mm": 8
-					},
-					"qpf_day": {
-						"in": 0.23,
-						"mm": 6
-					},
-					"qpf_night": {
-						"in": 0.08,
-						"mm": 2
-					},
-					"snow_allday": {
-						"in": 0.3,
-						"cm": 0.8
-					},
-					"snow_day": {
-						"in": 0.0,
-						"cm": 0.0
-					},
-					"snow_night": {
-						"in": 0.3,
-						"cm": 0.8
-					},
-					"maxwind": {
-						"mph": 10,
-						"kph": 16,
-						"dir": "N",
-						"degrees": 349
-					},
-					"avewind": {
-						"mph": 6,
-						"kph": 10,
-						"dir": "N",
-						"degrees": 349
-					},
-					"avehumidity": 96,
-					"maxhumidity": 0,
-					"minhumidity": 0
-				},
-				{
-					"date": {
-						"epoch": "1496581200",
-						"pretty": "9:00 PM CST on June 04, 2017",
-						"day": 4,
-						"month": 6,
-						"year": 2017,
-						"yday": 154,
-						"hour": 21,
-						"min": "00",
-						"sec": 0,
-						"isdst": "0",
-						"monthname": "June",
-						"monthname_short": "Jun",
-						"weekday_short": "Sun",
-						"weekday": "Sunday",
-						"ampm": "PM",
-						"tz_short": "CST",
-						"tz_long": "Asia/Shanghai"
-					},
-					"period": 4,
-					"high": {
-						"fahrenheit": "44",
-						"celsius": "7"
-					},
-					"low": {
-						"fahrenheit": "28",
-						"celsius": "-2"
-					},
-					"conditions": "Chance of Rain",
-					"icon": "chancerain",
-					"icon_url": "http://icons.wxug.com/i/c/k/chancerain.gif",
-					"skyicon": "",
-					"pop": 40,
-					"qpf_allday": {
-						"in": 0.03,
-						"mm": 1
-					},
-					"qpf_day": {
-						"in": 0.03,
-						"mm": 1
-					},
-					"qpf_night": {
-						"in": 0.00,
-						"mm": 0
-					},
-					"snow_allday": {
-						"in": 0.0,
-						"cm": 0.0
-					},
-					"snow_day": {
-						"in": 0.0,
-						"cm": 0.0
-					},
-					"snow_night": {
-						"in": 0.0,
-						"cm": 0.0
-					},
-					"maxwind": {
-						"mph": 15,
-						"kph": 24,
-						"dir": "WNW",
-						"degrees": 298
-					},
-					"avewind": {
-						"mph": 11,
-						"kph": 18,
-						"dir": "WNW",
-						"degrees": 298
-					},
-					"avehumidity": 57,
-					"maxhumidity": 0,
-					"minhumidity": 0
-				}
-			]
-		}
 	}
-});
+}
