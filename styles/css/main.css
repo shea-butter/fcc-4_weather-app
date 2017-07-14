@@ -1,6 +1,7 @@
 *,
 *:before,
 *:after {
+	border: 1px solid red;
 	box-sizing: border-box;
 }
 
@@ -13,41 +14,92 @@ main {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	
 	margin: 0 auto;
 	width: 90%;
 }
-
+/*----------------------------------------------*/
 .locale {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
-	margin: 0 auto;
-}
-
-.currentIcon {
-	align-self: auto;
-	display: flex;
-	flex: 0 1 auto;
-	margin: 0;
+	
 	order: 0;
+	flex: 0 1 auto;
 }
+/*----------------------------------------------*/
+/*------------------------------------*/
+.location {
+	display: flex;
+	
+	order: 0;
+	flex: 0 1 auto;
+	align-self: center;
+}
+/*------------------------------------*/
 
+/*------------------------------------*/
+.currentIcon {
+	display: flex;
+	
+	order: 1;
+	flex: 0 1 auto;
+	align-self: center;
+}
+/*------------------------------------*/
+/*--------------------------*/
 .currentWeatherIcon {
+	height: 10vh;
 	margin: auto;
+	width: 10vh;
 }
-
+/*--------------------------*/
+/*------------------------------------*/
 .currentTemp {
+	display: flex;
 	flex-direction: row;
+	flex-wrap: nowrap;
+	
+	order: 2;
+	flex: 0 1 auto;
+	align-self: center;
 }
-
+/*------------------------------------*/
+/*--------------------------*/
 .currentTemp h1 {
 	order: 0;
 	flex: 0 1 auto;
 	align-self: auto;
 }
-
-
-
+/*--------------------------*/
+/*--------------------------*/
+.currentConditions {
+	order: 1;
+	flex: 0 1 auto;
+	align-self: auto;
+}
+/*--------------------------*/
+/*------------------------------------*/
+.convert {
+	align-self: auto;
+	display: flex;
+	flex: 0 1 auto;
+	margin: auto;
+	order: 3;
+}
+/*------------------------------------*/
+/*----------------------------------------------*/
+.readings{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	
+	order: 1;
+	flex: 0 1 auto;
+}
 .flex-row1,
 .flex-row2,
 .flex-row3,
@@ -56,28 +108,56 @@ main {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	justify-content: center;
-	align-content: center;
-	align-items: center;
 }
 
+.latitude {
+	order: 0;
+	flex: 1;
+}
 
+.longitude {
+	order: 1;
+	flex: 1;
 
+}
+.elevation {
+	order: 0;
+	flex: 1;
+}
 
-.latitude,
-.longitude,
-.elevation,
-.visibility,
-.precipitation,
-.pressure,
-.humidity,
-.dewpoint,
-.wind,
-.windchill{
-	margin: auto;
+.visibility {
+	order: 1;
+	flex: 1;
+}
+
+.precipitation {
+	order: 0;
+	flex: 1;
 }
 
 .pressure {
+	order: 1;
+	flex: 1;
+}
+
+.humidity {
+	order: 0;
+	flex: 1;
+}
+
+.dewpointWrapper {
+	order: 1;
+	flex: 1;
+}
+
+.wind {
+	order: 0;
+	flex: 1;
+}
+
+.windchillWrapper{
+	order: 1;
+	flex: 1;
 }
 
 .latitude::before,
@@ -92,58 +172,72 @@ main {
 .windchill::before{
 	align-self: auto;
 	flex: 0 1 auto;
-	margin-left: 2.5rem;
+	margin-right: 1rem;
 }
 
 .latitude::before{
 	content:url('../../assets/icons/latitude.png');
-	order: 1;
+	order: 0;
 }
 
 .longitude::before{
 	content:url('../../assets/icons/longitude.png');
-	order: 2;
+	order: 1;
 }
 
 .elevation::before{
 	content:url('../../assets/icons/elevation.png');
-	order:1;
+	order:0;
 }
 
 .visibility::before{
 	content:url('../../assets/icons/visibility.png');
-	order: 2;
+	order: 1;
 }
 
 .precipitation::before{
 	content:url('../../assets/icons/precipitation.png');
-	order: 1;
+	order: 0;
 }
 
 .pressure::before{
 	content:url('../../assets/icons/pressure.png');
-	order: 2;
+	order: 1;
 }
 
 .humidity::before{
 	content:url('../../assets/icons/humidity.png');
-	order: 1;
+	order: 0;
 }
 
 .dewpoint::before{
 	content:url('../../assets/icons/dewpoint.png');
-	order: 2;
+	order: 1;
 }
 
 .wind::before{
 	content:url('../../assets/icons/wind.png');
-	order: 1;
+	order: 0;
 }
 
 .windchill::before{
 	content:url('../../assets/icons/windchill.png');
-	order: 2;
+	order: 1;
 }
+/*----------------------------------------------*/
+
+/*----------------------------------------------*/
+.search {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	
+	order: 2;
+	flex: 0 1 auto;
+}
+/*----------------------------------------------*/
+
+
 
 
 

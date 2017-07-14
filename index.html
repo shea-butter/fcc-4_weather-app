@@ -24,62 +24,63 @@
 				</div>
 
 				<div class="currentTemp">
+
 					<h1>
 						<strong class="currentDegrees"></strong><sup>&deg;<span class="degreeType">F</span></sup>
 					</h1>
-					<p>
-						<span class="feelslike"></span>
-						<sup>&deg;<span class="degreeType">F</span></sup>
-					</p>
-					<p class="conditions"></p>
+
+					<div class="CurrentConditions">
+						<p>
+							<span class="feelslike"></span>
+							<sup>&deg;<span class="degreeType">F</span></sup>
+						</p>
+						<p class="conditions"></p>
+					</div>
+
 				</div>
 
 				<button class="convert" onclick="weatherApp.toggleTempType()">Convert to &deg;C (Metric)</button>
 
 			</div>
 
-			<div class="current">
+			<div class="readings">
 
-				<div class="readings">
+				<div class="flex-row1">
+					<p class="latitude"></p>
+					<p class="longitude"></p>
+				</div>
 
-					<div class="flex-row1">
-						<p class="latitude"></p>
-						<p class="longitude"></p>
-					</div>
+				<div class="flex-row2">
+					<p class="elevation"></p>
+					<p class="visibility"></p>
+				</div>
 
-					<div class="flex-row2">
-						<p class="elevation"></p>
-						<p class="visibility"></p>
-					</div>
+				<div class="flex-row3">
+					<p class="precipitation"></p>
+					<p class="pressure"></p>
+				</div>
 
-					<div class="flex-row3">
-						<p class="precipitation"></p>
-						<p class="pressure"></p>
-					</div>
+				<div class="flex-row4">
+					<p class="humidity"></p>
+					<p class="dewpointWrapper">
+						<span class="dewpoint"></span>
+						<sup>&deg;<span class="degreeType">F</span></sup>
+					</p>
+				</div>
 
-					<div class="flex-row4">
-						<p class="humidity"></p>
-						<p>
-							<span class="dewpoint"></span>
-							<sup>&deg;<span class="degreeType">F</span></sup>
-						</p>
-					</div>
-
-					<div class="flex-row5">
-						<p class="wind"></p>
-						<p>
-							<span class="windchill"></span>
-							<sup>&deg;<span class="degreeType">F</span></sup>
-						</p>
-					</div>
-
+				<div class="flex-row5">
+					<p class="wind"></p>
+					<p class="windchillWrapper">
+						<span class="windchill"></span>
+						<sup>&deg;<span class="degreeType">F</span></sup>
+					</p>
 				</div>
 
 			</div>
 
 			<div class="search">
 
-				<form name="searchForm" action="javascript: false";>
+				<form class="searchForm" name="searchForm" action="javascript: false";>
 					<input type="search" name="searchBox" />
 					<input type="submit" name="submitButton" onclick="weatherApp.setWeather()" />
 				</form>
@@ -87,7 +88,7 @@
 				<div class="searchRules">
 
 					<p>
-						You can search for a specific location above.
+						You can search for a specific location above. <br>
 						Use one of the following formats:
 					</p>
 
