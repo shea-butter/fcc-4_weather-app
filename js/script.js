@@ -75,25 +75,25 @@ const weatherApp = {
 				tags.title[0].innerHTML = `WeatherApp - ${dataStart.display_location.full}`;
 
 				if (this.temperatureUnits !== `C`) {
-					tags.currentTemp[0].innerHTML = `${Number(dataStart.temp_f).toFixed()}`;
-					tags.dewpoint[0].innerHTML = `Dewpoint: ${dataStart.dewpoint_f}`;
+					tags.currentTemp[0].innerHTML = `${Number(dataStart.temp_f).toFixed()} °F`;
+					tags.dewpoint[0].innerHTML = `Dewpoint: ${dataStart.dewpoint_f} °F`;
 					tags.elevation[0].innerHTML = `Elevation: ${Number(dataStart.display_location.elevation * 3.28084).toFixed()} ${weatherApp.distanceUnitsMed}`;
-					tags.feelslike[0].innerHTML = `Feels Like: ${Number(dataStart.feelslike_f).toFixed()}`;
+					tags.feelslike[0].innerHTML = `Feels Like: ${Number(dataStart.feelslike_f).toFixed()} °F`;
 					tags.precipitation[0].innerHTML = `Precipitation: ${dataStart.precip_today_in} ${weatherApp.distanceUnitsSm}`;
 					tags.pressure[0].innerHTML = `Pressure: ${dataStart.pressure_in} ${weatherApp.pressureUnits}`;
 					tags.visibility[0].innerHTML = `Visibility: ${dataStart.visibility_mi} ${weatherApp.distanceUnitsLg}`;
 					tags.wind[0].innerHTML = `Wind: ${dataStart.wind_dir}, ${dataStart.wind_mph} ${weatherApp.speedUnits}`;
-					tags.windchill[0].innerHTML = `Wind Chill: ${dataStart.windchill_f}`;
+					tags.windchill[0].innerHTML = `Wind Chill: ${dataStart.windchill_f} °F`;
 				} else {
-					tags.currentTemp[0].innerHTML = `${Number(dataStart.temp_c).toFixed()}`;
-					tags.dewpoint[0].innerHTML = `Dewpoint: ${dataStart.dewpoint_c}`;
+					tags.currentTemp[0].innerHTML = `${Number(dataStart.temp_c).toFixed()} °C`;
+					tags.dewpoint[0].innerHTML = `Dewpoint: ${dataStart.dewpoint_c} °C`;
 					tags.elevation[0].innerHTML = `↑ Elevation: ${Number(dataStart.display_location.elevation).toFixed()} ${weatherApp.distanceUnitsMed}`;
-					tags.feelslike[0].innerHTML = `Feels Like: ${Number(dataStart.feelslike_c).toFixed()}`;
+					tags.feelslike[0].innerHTML = `Feels Like: ${Number(dataStart.feelslike_c).toFixed()} °C`;
 					tags.precipitation[0].innerHTML = `Precipitation: ${dataStart.precip_today_metric} ${weatherApp.distanceUnitsSm}`;
 					tags.pressure[0].innerHTML = `Pressure: ${dataStart.pressure_mb} ${weatherApp.pressureUnits}`;
 					tags.visibility[0].innerHTML = `Visibility: ${dataStart.visibility_km} ${weatherApp.distanceUnitsLg}`;
 					tags.wind[0].innerHTML = `Wind: ${dataStart.wind_dir}, ${dataStart.wind_kph} ${weatherApp.speedUnits}`;
-					tags.windchill[0].innerHTML = `Wind Chill: ${dataStart.windchill_c}`;
+					tags.windchill[0].innerHTML = `Wind Chill: ${dataStart.windchill_c} °C`;
 				}
 			});
 	},
@@ -107,38 +107,38 @@ const weatherApp = {
 		const dataStart = this.data.current_observation;
 
 		if (this.temperatureUnits !== `C`) {
-			this.dewpoint = dataStart.dewpoint_c;
+			this.dewpoint = `${dataStart.dewpoint_c} °C`;
 			this.distanceUnitsLg = `km`;
 			this.distanceUnitsMed = `m`;
 			this.distanceUnitsSm = `cm`;
 			this.elevation = `${Number(dataStart.display_location.elevation).toFixed()}`;
-			this.feelslike = `${Number(dataStart.feelslike_c).toFixed()}`;
+			this.feelslike = `${Number(dataStart.feelslike_c).toFixed()} °C`;
 			this.precipitation = dataStart.precip_today_metric;
 			this.pressure = dataStart.pressure_mb;
 			this.pressureUnits = `mb`;
 			this.speedUnits = `kph`;
-			this.temperature = `${Number(dataStart.temp_c).toFixed()}`;
+			this.temperature = `${Number(dataStart.temp_c).toFixed()} °C`;
 			this.temperatureUnits = `C`;
 			this.visibility = dataStart.visibility_km;
 			this.wind = dataStart.wind_kph;
-			this.windchill = dataStart.windchill_c;
+			this.windchill = `${dataStart.windchill_c} °C`;
 			convert.innerHTML = `Convert to &deg;F (Emperial)`;
 		} else {
-			this.dewpoint = dataStart.dewpoint_f;
+			this.dewpoint = `${dataStart.dewpoint_f} °F`;
 			this.distanceUnitsLg = `mi`;
 			this.distanceUnitsMed = `ft`;
 			this.distanceUnitsSm = `in`;
 			this.elevation = `${Number(dataStart.display_location.elevation * 3.28084).toFixed()}`;
-			this.feelslike = `${Number(dataStart.feelslike_f).toFixed()}`;
+			this.feelslike = `${Number(dataStart.feelslike_f).toFixed()} °F`;
 			this.precipitation = dataStart.precip_today_in;
 			this.pressure = dataStart.pressure_in;
 			this.pressureUnits = `in`;
 			this.speedUnits = `mph`;
-			this.temperature = `${Number(dataStart.temp_f).toFixed()}`;
+			this.temperature = `${Number(dataStart.temp_f).toFixed()} °F`;
 			this.temperatureUnits = `F`;
 			this.visibility = dataStart.visibility_mi;
 			this.wind = dataStart.wind_mph;
-			this.windchill = dataStart.windchill_f;
+			this.windchill = `${dataStart.windchill_f} °F`;
 			convert.innerHTML = `Convert to &deg;C (Metric)`;
 		}
 
@@ -159,9 +159,9 @@ const weatherApp = {
 		tags.wind[0].innerHTML = `Wind: ${dataStart.wind_dir}, ${this.wind} ${weatherApp.speedUnits}`;
 		tags.windchill[0].innerHTML = `Wind Chill: ${this.windchill}`;
 
-		Array.from(tags.degreeType).forEach((index)=> {
-			index.innerHTML = this.temperatureUnits;
-		});
+		// Array.from(tags.degreeType).forEach((index)=> {
+		// 	index.innerHTML = this.temperatureUnits;
+		// });
 	},
 
 	visibility: 0,

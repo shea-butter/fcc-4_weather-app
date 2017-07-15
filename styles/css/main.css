@@ -1,13 +1,14 @@
 *,
 *:before,
 *:after {
-	border: 1px solid red;
+	/*border: 1px solid red;*/
 	box-sizing: border-box;
 }
 
 body {
 	background: whitesmoke;
 	color: #454545;
+	margin-bottom: 5rem;
 }
 
 main {
@@ -16,26 +17,36 @@ main {
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-content: center;
-	align-items: center;
-	
+	align-items: stretch;
+
 	margin: 0 auto;
-	width: 90%;
+	/*width: 90%;*/
+}
+
+h1 {
+	font-size: 3rem;
+	font-family: 'Rakkas';
+}
+
+p {
+	font-size: 1.5rem;
+	font-family: 'Bellefair';
 }
 /*----------------------------------------------*/
 .locale {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
-	
-	order: 0;
+
+	order: 1;
 	flex: 0 1 auto;
 }
 /*----------------------------------------------*/
 /*------------------------------------*/
 .location {
 	display: flex;
-	
-	order: 0;
+
+	order: 1;
 	flex: 0 1 auto;
 	align-self: center;
 }
@@ -44,8 +55,8 @@ main {
 /*------------------------------------*/
 .currentIcon {
 	display: flex;
-	
-	order: 1;
+
+	order: 2;
 	flex: 0 1 auto;
 	align-self: center;
 }
@@ -62,8 +73,8 @@ main {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	
-	order: 2;
+
+	order: 3;
 	flex: 0 1 auto;
 	align-self: center;
 }
@@ -73,6 +84,8 @@ main {
 	order: 0;
 	flex: 0 1 auto;
 	align-self: auto;
+
+	margin-right: 2rem;
 }
 /*--------------------------*/
 /*--------------------------*/
@@ -88,7 +101,7 @@ main {
 	display: flex;
 	flex: 0 1 auto;
 	margin: auto;
-	order: 3;
+	order: 4;
 }
 /*------------------------------------*/
 /*----------------------------------------------*/
@@ -96,10 +109,13 @@ main {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
-	
-	order: 1;
+
+	order: 2;
 	flex: 0 1 auto;
+
+	margin-top: 2rem;
 }
+
 .flex-row1,
 .flex-row2,
 .flex-row3,
@@ -108,121 +124,108 @@ main {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-}
-
-.latitude {
-	order: 0;
 	flex: 1;
 }
 
-.longitude {
+.flex-row1 {
 	order: 1;
-	flex: 1;
-
 }
-.elevation {
-	order: 0;
-	flex: 1;
+.flex-row2 {
+	order: 2;
+}
+.flex-row3 {
+	order: 3;
+}
+.flex-row4 {
+	order: 4;
+}
+.flex-row5 {
+	order: 5;
 }
 
-.visibility {
+.latitudeIcon,
+.elevationIcon,
+.precipitationIcon,
+.humidityIcon,
+.windIcon {
 	order: 1;
-	flex: 1;
-}
-
-.precipitation {
-	order: 0;
-	flex: 1;
-}
-
-.pressure {
-	order: 1;
-	flex: 1;
-}
-
-.humidity {
-	order: 0;
-	flex: 1;
-}
-
-.dewpointWrapper {
-	order: 1;
-	flex: 1;
-}
-
-.wind {
-	order: 0;
-	flex: 1;
-}
-
-.windchillWrapper{
-	order: 1;
-	flex: 1;
-}
-
-.latitude::before,
-.longitude::before,
-.elevation::before,
-.visibility::before,
-.precipitation::before,
-.pressure::before,
-.humidity::before,
-.dewpoint::before,
-.wind::before,
-.windchill::before{
-	align-self: auto;
-	flex: 0 1 auto;
+	/*flex: 2;*/
+	padding: 0.5rem 0;
 	margin-right: 1rem;
+	width: 3rem;
 }
 
-.latitude::before{
-	content:url('../../assets/icons/latitude.png');
-	order: 0;
+.latitude,
+.elevation,
+.precipitation,
+.humidity,
+.wind {
+	order: 2;
+	flex: 1;
+	white-space: nowrap;
+	margin-right: 2rem;
 }
 
-.longitude::before{
-	content:url('../../assets/icons/longitude.png');
-	order: 1;
+.longitudeIcon,
+.visibilityIcon,
+.pressureIcon,
+.dewpointIcon,
+.windchillIcon {
+	order: 3;
+	/*flex: 2;*/
+	padding: 0.5rem 0;
+	margin-right: 1rem;
+	width: 3rem;
 }
 
-.elevation::before{
-	content:url('../../assets/icons/elevation.png');
-	order:0;
+.longitude,
+.visibility,
+.pressure,
+.dewpoint,
+.windchill {
+	order: 4;
+	flex: 1;
+	white-space: nowrap;
 }
 
-.visibility::before{
-	content:url('../../assets/icons/visibility.png');
-	order: 1;
+.latitudeIcon {
+	content: url('../../assets/icons/latitude.png');
 }
 
-.precipitation::before{
-	content:url('../../assets/icons/precipitation.png');
-	order: 0;
+.longitudeIcon {
+	content: url('../../assets/icons/longitude.png');
 }
 
-.pressure::before{
-	content:url('../../assets/icons/pressure.png');
-	order: 1;
+.elevationIcon {
+	content: url('../../assets/icons/elevation.png');
 }
 
-.humidity::before{
-	content:url('../../assets/icons/humidity.png');
-	order: 0;
+.visibilityIcon {
+	content: url('../../assets/icons/visibility.png');
 }
 
-.dewpoint::before{
-	content:url('../../assets/icons/dewpoint.png');
-	order: 1;
+.precipitationIcon {
+	content: url('../../assets/icons/precipitation.png');
 }
 
-.wind::before{
-	content:url('../../assets/icons/wind.png');
-	order: 0;
+.pressureIcon {
+	content: url('../../assets/icons/pressure.png');
 }
 
-.windchill::before{
-	content:url('../../assets/icons/windchill.png');
-	order: 1;
+.humidityIcon {
+	content: url('../../assets/icons/humidity.png');
+}
+
+.dewpointIcon {
+	content: url('../../assets/icons/dewpoint.png');
+}
+
+.windIcon {
+	content: url('../../assets/icons/wind.png');
+}
+
+.windchillIcon {
+	content: url('../../assets/icons/windchill.png');
 }
 /*----------------------------------------------*/
 
@@ -231,12 +234,18 @@ main {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
-	
-	order: 2;
+
+	order: 3;
 	flex: 0 1 auto;
+
+	margin-top: 2rem;
+	font-family: 'Share';
 }
 /*----------------------------------------------*/
-
+.searchForm,
+.searchRules {
+	margin: auto;
+}
 
 
 
@@ -316,28 +325,38 @@ blockquote {
 }
 
 footer {
-	background: lightblue;
+	background: #c4dff7;
 	bottom: 0;
-	color: whitesmoke;
-	height: 6rem;
+	color: #454545;
+	height: 5rem;
 	margin: 0;
 	position: fixed;
 	left: 0;
+	text-align: center;
 	width: 100%;
 }
 
 footer ul,
 footer p {
-	margin: 0;
-	padding-top: 1rem;
+	margin: 0 auto;
+	padding-top: .5rem;
+	padding-left: 0;
 }
 
-footer p {
-	padding: 1rem 0;
+footer ul li {
+	display: inline-block;
+	list-style: none;
+	font-size: 1.5rem;
+	margin: 0 .5rem;
 }
 
 footer ul li i {
 	color: black;
+}
+
+footer p {
+	padding: 1rem 0;
+	font-size: 1.25rem;
 }
 
 .info {
@@ -385,9 +404,14 @@ footer ul li i {
 	.modal-content {
 		font-size: calc(100vw / 136);
 	}
-	.page {
-		max-width: 50vw;
+	main {
+		width: 50vw;
 	}
+	
+	.readings {
+		width: 40vw;
+	}
+	
 	.quote:after,
 	.quote:before {
 		font-size: calc(100vw / 136 * 5);
@@ -405,8 +429,8 @@ footer ul li i {
 	.modal-content {
 		font-size: calc(100vw / 50);
 	}
-	.page {
-		max-width: 75vw;
+	main {
+		max-width: 90vw;
 	}
 	blockquote {
 		margin: 1rem 0;

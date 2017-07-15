@@ -8,6 +8,10 @@
 
 		<link rel="stylesheet" href="styles/css/main.css">
 
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bellefair|Rakkas|Share">
+
+		<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
 		<!--<script src="js/vendor/modernizr-2.8.3.min.js"></script>-->
 	</head>
 
@@ -26,14 +30,11 @@
 				<div class="currentTemp">
 
 					<h1>
-						<strong class="currentDegrees"></strong><sup>&deg;<span class="degreeType">F</span></sup>
+						<strong class="currentDegrees"></strong>
 					</h1>
 
 					<div class="CurrentConditions">
-						<p>
-							<span class="feelslike"></span>
-							<sup>&deg;<span class="degreeType">F</span></sup>
-						</p>
+						<p class="feelslike"></p>
 						<p class="conditions"></p>
 					</div>
 
@@ -46,34 +47,28 @@
 			<div class="readings">
 
 				<div class="flex-row1">
-					<p class="latitude"></p>
-					<p class="longitude"></p>
+					<div class="latitudeIcon"></div><p class="latitude"></p>
+					<div class="longitudeIcon"></div><p class="longitude"></p>
 				</div>
 
 				<div class="flex-row2">
-					<p class="elevation"></p>
-					<p class="visibility"></p>
+					<div class="elevationIcon"></div><p class="elevation"></p>
+					<div class="visibilityIcon"></div><p class="visibility"></p>
 				</div>
 
 				<div class="flex-row3">
-					<p class="precipitation"></p>
-					<p class="pressure"></p>
+					<div class="precipitationIcon"></div><p class="precipitation"></p>
+					<div class="pressureIcon"></div><p class="pressure"></p>
 				</div>
 
 				<div class="flex-row4">
-					<p class="humidity"></p>
-					<p class="dewpointWrapper">
-						<span class="dewpoint"></span>
-						<sup>&deg;<span class="degreeType">F</span></sup>
-					</p>
+					<div class="humidityIcon"></div><p class="humidity"></p>
+					<div class="dewpointIcon"></div><p class="dewpoint"></p>
 				</div>
 
 				<div class="flex-row5">
-					<p class="wind"></p>
-					<p class="windchillWrapper">
-						<span class="windchill"></span>
-						<sup>&deg;<span class="degreeType">F</span></sup>
-					</p>
+					<div class="windIcon"></div><p class="wind"></p>
+					<div class="windchillIcon"></div><p class="windchill"></p>
 				</div>
 
 			</div>
@@ -81,7 +76,7 @@
 			<div class="search">
 
 				<form class="searchForm" name="searchForm" action="javascript: false";>
-					<input type="search" name="searchBox" />
+					<input type="search" name="searchBox" placeholder="search location"/>
 					<input type="submit" name="submitButton" onclick="weatherApp.setWeather()" />
 				</form>
 
@@ -135,5 +130,32 @@
 		<a href="https://icons8.com">Secondary icons by Icons8</a>
 		<a href="https://wunderground.com">Weather and Main Icon by Wunderground</a>
 	</footer>
+	<footer class="center right-0 bottom-0 left-0">
+			<div id="social-logos" class="col-xs-12">
+				<ul class="list-reset">
+					<li id="github" class="inline-block h2 ml1 mr1"><a href="https://github.com/sheafitzek" rel="noopener noreferrer" target="_blank"><i class="fa fa-github fa-fw " aria-hidden="true "></i></a></li>
+					<li id="codepen" class="inline-block h2 ml1 mr1"><a href="https://codepen.io/sheafitzek/" rel="noopener noreferrer" target="_blank"><i class="fa fa-codepen fa-fw " aria-hidden="true "></i></a></li>
+					<li id="linkedin" class="inline-block h2 ml1 mr1"><a href="https://www.linkedin.com/in/sheafitzek" rel="noopener noreferrer" target="_blank"><i class="fa fa-linkedin fa-fw " aria-hidden="true "></i></a></li>
+					<li id="twitter" class="inline-block h2 ml1 mr1"><a href="https://twitter.com/sheafitzek" rel="noopener noreferrer" target="_blank"><i class="fa fa-twitter fa-fw " aria-hidden="true "></i></a></li>
+					<li id="facebook" class="inline-block h2 ml1 mr1"><a href="https://www.facebook.com/shea.fitzek" rel="noopener noreferrer" target="_blank"><i class="fa fa-facebook fa-fw " aria-hidden="true "></i></a></li>
+					<li id="medium" class="inline-block h2 ml1 mr1"><a href="https://medium.com/@shea_butter" rel="noopener noreferrer" target="_blank"><i class="fa fa-medium fa-fw " aria-hidden="true "></i></a></li>
+					<li id="meetup" class="inline-block h2 ml1 mr1"><a href="https://www.meetup.com/members/209350641/" rel="noopener noreferrer" target="_blank"><i class="fa fa-meetup fa-fw " aria-hidden="true "></i></a></li>
+					<li id="slack" class="inline-block h2 ml1 mr1"><a href="https://sheafitzek.slack.com" rel="noopener noreferrer" target="_blank"><i class="fa fa-slack fa-fw " aria-hidden="true "></i></a></li>
+					<li id="trello" class="inline-block h2 ml1 mr1"><a href="https://trello.com/sheafitzek" rel="noopener noreferrer" target="_blank"><i class="fa fa-trello fa-fw " aria-hidden="true "></i></a></li>
+					<li id="free-code-camp" class="inline-block h2 ml1 mr1"><a href="https://www.freecodecamp.com/sheafitzek" rel="noopener noreferrer" target="_blank"><i class="fa fa-free-code-camp fa-fw " aria-hidden="true "></i></a></li>
+				</ul>
+			</div>
+
+			<p>© 2017 Shea Fitzek - All Rights Reserved | <span class="info" onclick="openModal()">page info</span></p>
+
+			<div class="modal" onclick="closeModal()">
+				<div class="modal-content">
+					<span class="close" onclick="closeModal()">&times;</span>
+					<p class="h2">This was coded as part of the FreeCodeCamp curriculum</p>
+					<p class="h2">All quotes delivered by the <a href="https://quotesondesign.com/" rel="noopener noreferrer" target="_blank">Quotes on Design</a> API</p>
+				</div>
+			</div>
+
+		</footer>
 
 </html>
