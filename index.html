@@ -76,8 +76,8 @@
 			<div class="search">
 
 				<form class="searchForm" name="searchForm" action="javascript: false";>
-					<input type="search" name="searchBox" placeholder="search location"/>
-					<input type="submit" name="submitButton" onclick="weatherApp.setWeather()" />
+					<input type="search" name="searchBox" placeholder="search location" required/>
+					<button type="submit" name="submitButton" onclick="weatherApp.setWeather()">Search</button>
 				</form>
 
 				<div class="searchRules">
@@ -120,17 +120,11 @@
 
 		</main>
 
-		<pre class="ajax"></pre>
-
-		<script type="text/javascript" src="js/script.js"></script>
-
-	</body>
-
-	<footer>
-		<a href="https://icons8.com">Secondary icons by Icons8</a>
-		<a href="https://wunderground.com">Weather and Main Icon by Wunderground</a>
-	</footer>
-	<footer class="center right-0 bottom-0 left-0">
+		<footer>
+			<a href="https://icons8.com">Secondary icons by Icons8</a>
+			<a href="https://wunderground.com">Weather and Main Icon by Wunderground</a>
+		</footer>
+		<footer class="center right-0 bottom-0 left-0">
 			<div id="social-logos" class="col-xs-12">
 				<ul class="list-reset">
 					<li id="github" class="inline-block h2 ml1 mr1"><a href="https://github.com/sheafitzek" rel="noopener noreferrer" target="_blank"><i class="fa fa-github fa-fw " aria-hidden="true "></i></a></li>
@@ -157,5 +151,11 @@
 			</div>
 
 		</footer>
+
+		<pre class="ajax"></pre>
+
+		<script type="text/javascript" src="js/script.js"></script>
+
+	</body>
 
 </html>
