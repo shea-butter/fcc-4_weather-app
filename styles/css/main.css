@@ -1,7 +1,7 @@
 *,
 *:before,
 *:after {
-	/*border: 1px solid red;*/
+	border: 1px solid red;
 	box-sizing: border-box;
 }
 
@@ -40,6 +40,8 @@ p {
 
 	order: 1;
 	flex: 0 1 auto;
+
+	margin-bottom: 2rem;
 }
 /*----------------------------------------------*/
 /*------------------------------------*/
@@ -113,7 +115,8 @@ p {
 	order: 2;
 	flex: 0 1 auto;
 
-	margin-top: 2rem;
+	background: rgba(0, 0, 0, 0.05);
+	margin: auto;
 }
 
 .flex-row1,
@@ -150,9 +153,12 @@ p {
 .windIcon {
 	order: 1;
 	/*flex: 2;*/
+
 	padding: 0.5rem 0;
+	width: 4vh;
+	height: 5vh;
+	margin: auto;
 	margin-right: 1rem;
-	width: 3rem;
 }
 
 .latitude,
@@ -173,9 +179,12 @@ p {
 .windchillIcon {
 	order: 3;
 	/*flex: 2;*/
+
 	padding: 0.5rem 0;
+	width: 4vh;
+	height: 5vh;
+	margin: auto;
 	margin-right: 1rem;
-	width: 3rem;
 }
 
 .longitude,
