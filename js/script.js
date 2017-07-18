@@ -1,5 +1,17 @@
 const weatherApp = {
 
+	closeModal() {
+		const modal = document.getElementsByClassName(`modal`);
+		const modalContent = document.getElementsByClassName(`modal-content`);
+
+		modal[0].style.display = `none`;
+
+		window.onclick = function onclick(event) {
+			event.target === modalContent
+			&& (modal[0].style.display = `none`);
+		};
+	},
+
 	data: null,
 	dewpoint: 0,
 	distanceUnitsLg: `mi`,
@@ -48,6 +60,12 @@ const weatherApp = {
 			.then((data)=> {
 				return data.json();
 			});
+	},
+
+	openModal() {
+		const modal = document.getElementsByClassName(`modal`);
+
+		modal[0].style.display = `block`;
 	},
 
 	precipitation: 0,
@@ -158,10 +176,6 @@ const weatherApp = {
 		tags.visibility[0].innerHTML = `Visibility: ${this.visibility} ${weatherApp.distanceUnitsLg}`;
 		tags.wind[0].innerHTML = `Wind: ${dataStart.wind_dir}, ${this.wind} ${weatherApp.speedUnits}`;
 		tags.windchill[0].innerHTML = `Wind Chill: ${this.windchill}`;
-
-		// Array.from(tags.degreeType).forEach((index)=> {
-		// 	index.innerHTML = this.temperatureUnits;
-		// });
 	},
 
 	visibility: 0,
@@ -170,13 +184,3 @@ const weatherApp = {
 };
 
 window.onload = weatherApp.setWeather;
-
-// console.clear();
-
-
-// promise / fetch
-// async
-
-// study practice build refactor repeat
-
-// search sort big-O-notation

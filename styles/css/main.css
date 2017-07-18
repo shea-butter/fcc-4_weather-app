@@ -1,7 +1,6 @@
 *,
 *:before,
 *:after {
-	border: 1px solid red;
 	box-sizing: border-box;
 }
 
@@ -20,7 +19,6 @@ main {
 	align-items: stretch;
 
 	margin: 0 auto;
-	/*width: 90%;*/
 }
 
 h1 {
@@ -32,7 +30,7 @@ p {
 	font-size: 1.5rem;
 	font-family: 'Bellefair';
 }
-/*----------------------------------------------*/
+
 .locale {
 	display: flex;
 	flex-direction: column;
@@ -43,8 +41,7 @@ p {
 
 	margin-bottom: 2rem;
 }
-/*----------------------------------------------*/
-/*------------------------------------*/
+
 .location {
 	display: flex;
 
@@ -52,9 +49,7 @@ p {
 	flex: 0 1 auto;
 	align-self: center;
 }
-/*------------------------------------*/
 
-/*------------------------------------*/
 .currentIcon {
 	display: flex;
 
@@ -62,15 +57,13 @@ p {
 	flex: 0 1 auto;
 	align-self: center;
 }
-/*------------------------------------*/
-/*--------------------------*/
+
 .currentWeatherIcon {
 	height: 10vh;
 	margin: auto;
 	width: 10vh;
 }
-/*--------------------------*/
-/*------------------------------------*/
+
 .currentTemp {
 	display: flex;
 	flex-direction: row;
@@ -80,8 +73,7 @@ p {
 	flex: 0 1 auto;
 	align-self: center;
 }
-/*------------------------------------*/
-/*--------------------------*/
+
 .currentTemp h1 {
 	order: 0;
 	flex: 0 1 auto;
@@ -89,15 +81,13 @@ p {
 
 	margin-right: 2rem;
 }
-/*--------------------------*/
-/*--------------------------*/
+
 .currentConditions {
 	order: 1;
 	flex: 0 1 auto;
 	align-self: auto;
 }
-/*--------------------------*/
-/*------------------------------------*/
+
 .convert {
 	align-self: auto;
 	display: flex;
@@ -105,8 +95,7 @@ p {
 	margin: auto;
 	order: 4;
 }
-/*------------------------------------*/
-/*----------------------------------------------*/
+
 .readings{
 	display: flex;
 	flex-direction: column;
@@ -117,32 +106,33 @@ p {
 
 	background: rgba(0, 0, 0, 0.05);
 	margin: auto;
+	width: 90%;
 }
 
-.flex-row1,
-.flex-row2,
-.flex-row3,
-.flex-row4,
-.flex-row5 {
+.readings-row1,
+.readings-row2,
+.readings-row3,
+.readings-row4,
+.readings-row5 {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
 	flex: 1;
 }
 
-.flex-row1 {
+.readings-row1 {
 	order: 1;
 }
-.flex-row2 {
+.readings-row2 {
 	order: 2;
 }
-.flex-row3 {
+.readings-row3 {
 	order: 3;
 }
-.flex-row4 {
+.readings-row4 {
 	order: 4;
 }
-.flex-row5 {
+.readings-row5 {
 	order: 5;
 }
 
@@ -152,13 +142,13 @@ p {
 .humidityIcon,
 .windIcon {
 	order: 1;
-	/*flex: 2;*/
 
 	padding: 0.5rem 0;
 	width: 4vh;
 	height: 5vh;
 	margin: auto;
 	margin-right: 1rem;
+	margin-left: 2.5rem;
 }
 
 .latitude,
@@ -168,7 +158,6 @@ p {
 .wind {
 	order: 2;
 	flex: 1;
-	white-space: nowrap;
 	margin-right: 2rem;
 }
 
@@ -178,7 +167,6 @@ p {
 .dewpointIcon,
 .windchillIcon {
 	order: 3;
-	/*flex: 2;*/
 
 	padding: 0.5rem 0;
 	width: 4vh;
@@ -194,7 +182,6 @@ p {
 .windchill {
 	order: 4;
 	flex: 1;
-	white-space: nowrap;
 }
 
 .latitudeIcon {
@@ -236,9 +223,7 @@ p {
 .windchillIcon {
 	content: url('../../assets/icons/windchill.png');
 }
-/*----------------------------------------------*/
 
-/*----------------------------------------------*/
 .search {
 	display: flex;
 	flex-direction: column;
@@ -250,87 +235,10 @@ p {
 	margin-top: 2rem;
 	font-family: 'Share';
 }
-/*----------------------------------------------*/
+
 .searchForm,
 .searchRules {
 	margin: auto;
-}
-
-
-
-
-
-
-
-
-.btn-outline {
-	color: #b4ecb4;
-}
-
-.page {
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.nextQuote {
-	margin-top: 25vh;
-	position: relative;
-}
-
-.content {
-	margin-top: 10vh;
-	position: relative;
-}
-
-.quote {
-	color: #ffd1dc;
-	font-family: 'Stint Ultra Expanded', cursive;
-}
-
-.quote:after,
-.quote:before {
-	color: #7ea4b3;
-	font-family: fontAwesome;
-	font-size: calc(100vmax / 108 * 5);
-	font-weight: bold;
-	line-height: 1;
-	position: absolute;
-}
-
-.quote:after {
-	content: "\f10e";
-	right: -5rem;
-	transform: translateY(-100%)
-}
-
-.quote:before {
-	content: "\f10d";
-	left: -5rem;
-}
-
-blockquote {
-	margin: 1rem 4rem;
-	text-align: left;
-}
-
-.meta {
-	margin: 0 4rem;
-	text-align: left;
-}
-
-.author {
-	color: #aec6cf;
-	font-family: 'Rock Salt', cursive;
-}
-
-.source a {
-	color: #fefec8
-}
-
-.tweetQuote {
-	margin-bottom: 10rem;
-	margin-top: 10vh;
-	position: relative;
 }
 
 footer {
@@ -368,10 +276,6 @@ footer p {
 	font-size: 1.25rem;
 }
 
-.info {
-	cursor: pointer;
-}
-
 .modal {
 	background-color: rgb(0, 0, 0);
 	background-color: rgba(0, 0, 0, 0.75);
@@ -386,7 +290,7 @@ footer p {
 }
 
 .modal-content {
-	background-color: #ffd1dc;
+	background-color: #c4dff7;
 	border: 1px solid #888;
 	color: #09203f;
 	margin: 15% auto;
@@ -416,20 +320,9 @@ footer p {
 	main {
 		width: 50vw;
 	}
-	
+
 	.readings {
-		width: 40vw;
-	}
-	
-	.quote:after,
-	.quote:before {
-		font-size: calc(100vw / 136 * 5);
-	}
-	.quote:after {
-		right: -5rem;
-	}
-	.quote:before {
-		left: -5rem;
+		width: 30vw;
 	}
 }
 
@@ -441,18 +334,7 @@ footer p {
 	main {
 		max-width: 90vw;
 	}
-	blockquote {
-		margin: 1rem 0;
-	}
-	.quote:after {
-		right: 0rem;
-		transform: translateY(0%)
-	}
-	.quote:before {
-		left: 0rem;
-		transform: translateY(-100%)
-	}
-	.meta {
-		margin: 0;
+	.readings {
+		width: 80vw;
 	}
 }

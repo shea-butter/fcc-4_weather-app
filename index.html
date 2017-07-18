@@ -46,27 +46,27 @@
 
 			<div class="readings">
 
-				<div class="flex-row1">
+				<div class="readings-row1">
 					<div class="latitudeIcon"></div><p class="latitude"></p>
 					<div class="longitudeIcon"></div><p class="longitude"></p>
 				</div>
 
-				<div class="flex-row2">
+				<div class="readings-row2">
 					<div class="elevationIcon"></div><p class="elevation"></p>
 					<div class="visibilityIcon"></div><p class="visibility"></p>
 				</div>
 
-				<div class="flex-row3">
+				<div class="readings-row3">
 					<div class="precipitationIcon"></div><p class="precipitation"></p>
 					<div class="pressureIcon"></div><p class="pressure"></p>
 				</div>
 
-				<div class="flex-row4">
+				<div class="readings-row4">
 					<div class="humidityIcon"></div><p class="humidity"></p>
 					<div class="dewpointIcon"></div><p class="dewpoint"></p>
 				</div>
 
-				<div class="flex-row5">
+				<div class="readings-row5">
 					<div class="windIcon"></div><p class="wind"></p>
 					<div class="windchillIcon"></div><p class="windchill"></p>
 				</div>
@@ -120,10 +120,6 @@
 
 		</main>
 
-		<footer>
-			<a href="https://icons8.com">Secondary icons by Icons8</a>
-			<a href="https://wunderground.com">Weather and Main Icon by Wunderground</a>
-		</footer>
 		<footer class="center right-0 bottom-0 left-0">
 			<div id="social-logos" class="col-xs-12">
 				<ul class="list-reset">
@@ -140,16 +136,16 @@
 				</ul>
 			</div>
 
-			<p>© 2017 Shea Fitzek - All Rights Reserved | <span class="info" onclick="openModal()">page info</span></p>
+			<p>© 2017 Shea Fitzek - All Rights Reserved | <span class="info" onclick="weatherApp.openModal()">page info</span></p>
 
-			<div class="modal" onclick="closeModal()">
+			<div class="modal" onclick="weatherApp.closeModal()">
 				<div class="modal-content">
-					<span class="close" onclick="closeModal()">&times;</span>
+					<span class="close" onclick="weatherApp.closeModal()">&times;</span>
 					<p class="h2">This was coded as part of the FreeCodeCamp curriculum</p>
-					<p class="h2">All quotes delivered by the <a href="https://quotesondesign.com/" rel="noopener noreferrer" target="_blank">Quotes on Design</a> API</p>
+					<p class="h2">Weather delivered by the <a href="https://wunderground.com" rel="noopener noreferrer" target="_blank">Wunderground</a> API</p>
+					<p class="h2">Secondary icons by <a href="https://icons8.com" rel="noopener noreferrer" target="_blank">Icons8</a></p>
 				</div>
 			</div>
-
 		</footer>
 
 		<pre class="ajax"></pre>
