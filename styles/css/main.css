@@ -1,0 +1,340 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+body {
+	background: whitesmoke;
+	color: #454545;
+	margin-bottom: 5rem;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-content: center;
+	align-items: stretch;
+
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 3rem;
+	font-family: 'Rakkas';
+}
+
+p {
+	font-size: 1.5rem;
+	font-family: 'Bellefair';
+}
+
+.locale {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+
+	order: 1;
+	flex: 0 1 auto;
+
+	margin-bottom: 2rem;
+}
+
+.location {
+	display: flex;
+
+	order: 1;
+	flex: 0 1 auto;
+	align-self: center;
+}
+
+.currentIcon {
+	display: flex;
+
+	order: 2;
+	flex: 0 1 auto;
+	align-self: center;
+}
+
+.currentWeatherIcon {
+	height: 10vh;
+	margin: auto;
+	width: 10vh;
+}
+
+.currentTemp {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+
+	order: 3;
+	flex: 0 1 auto;
+	align-self: center;
+}
+
+.currentTemp h1 {
+	order: 0;
+	flex: 0 1 auto;
+	align-self: auto;
+
+	margin-right: 2rem;
+}
+
+.currentConditions {
+	order: 1;
+	flex: 0 1 auto;
+	align-self: auto;
+}
+
+.convert {
+	align-self: auto;
+	display: flex;
+	flex: 0 1 auto;
+	margin: auto;
+	order: 4;
+}
+
+.readings{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+
+	order: 2;
+	flex: 0 1 auto;
+
+	background: rgba(0, 0, 0, 0.05);
+	margin: auto;
+	width: 90%;
+}
+
+.readings-row1,
+.readings-row2,
+.readings-row3,
+.readings-row4,
+.readings-row5 {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	flex: 1;
+}
+
+.readings-row1 {
+	order: 1;
+}
+.readings-row2 {
+	order: 2;
+}
+.readings-row3 {
+	order: 3;
+}
+.readings-row4 {
+	order: 4;
+}
+.readings-row5 {
+	order: 5;
+}
+
+.latitudeIcon,
+.elevationIcon,
+.precipitationIcon,
+.humidityIcon,
+.windIcon {
+	order: 1;
+
+	padding: 0.5rem 0;
+	width: 4vh;
+	height: 5vh;
+	margin: auto;
+	margin-right: 1rem;
+	margin-left: 2.5rem;
+}
+
+.latitude,
+.elevation,
+.precipitation,
+.humidity,
+.wind {
+	order: 2;
+	flex: 1;
+	margin-right: 2rem;
+}
+
+.longitudeIcon,
+.visibilityIcon,
+.pressureIcon,
+.dewpointIcon,
+.windchillIcon {
+	order: 3;
+
+	padding: 0.5rem 0;
+	width: 4vh;
+	height: 5vh;
+	margin: auto;
+	margin-right: 1rem;
+}
+
+.longitude,
+.visibility,
+.pressure,
+.dewpoint,
+.windchill {
+	order: 4;
+	flex: 1;
+}
+
+.latitudeIcon {
+	content: url('../../assets/icons/latitude.png');
+}
+
+.longitudeIcon {
+	content: url('../../assets/icons/longitude.png');
+}
+
+.elevationIcon {
+	content: url('../../assets/icons/elevation.png');
+}
+
+.visibilityIcon {
+	content: url('../../assets/icons/visibility.png');
+}
+
+.precipitationIcon {
+	content: url('../../assets/icons/precipitation.png');
+}
+
+.pressureIcon {
+	content: url('../../assets/icons/pressure.png');
+}
+
+.humidityIcon {
+	content: url('../../assets/icons/humidity.png');
+}
+
+.dewpointIcon {
+	content: url('../../assets/icons/dewpoint.png');
+}
+
+.windIcon {
+	content: url('../../assets/icons/wind.png');
+}
+
+.windchillIcon {
+	content: url('../../assets/icons/windchill.png');
+}
+
+.search {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+
+	order: 3;
+	flex: 0 1 auto;
+
+	margin-top: 2rem;
+	font-family: 'Share';
+}
+
+.searchForm,
+.searchRules {
+	margin: auto;
+}
+
+footer {
+	background: #c4dff7;
+	bottom: 0;
+	color: #454545;
+	height: 5rem;
+	margin: 0;
+	position: fixed;
+	left: 0;
+	text-align: center;
+	width: 100%;
+}
+
+footer ul,
+footer p {
+	margin: 0 auto;
+	padding-top: .5rem;
+	padding-left: 0;
+}
+
+footer ul li {
+	display: inline-block;
+	list-style: none;
+	font-size: 1.5rem;
+	margin: 0 .5rem;
+}
+
+footer ul li i {
+	color: black;
+}
+
+footer p {
+	padding: 1rem 0;
+	font-size: 1.25rem;
+}
+
+.modal {
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.75);
+	display: none;
+	height: 100%;
+	left: 0;
+	overflow: auto;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+.modal-content {
+	background-color: #c4dff7;
+	border: 1px solid #888;
+	color: #09203f;
+	margin: 15% auto;
+	padding: 20px;
+	width: 80%;
+}
+
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: black;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+@media screen and (orientation: landscape) {
+	html,
+	.modal-content {
+		font-size: calc(100vw / 136);
+	}
+	main {
+		width: 50vw;
+	}
+
+	.readings {
+		width: 30vw;
+	}
+}
+
+@media screen and (orientation: portrait) {
+	html,
+	.modal-content {
+		font-size: calc(100vw / 50);
+	}
+	main {
+		max-width: 90vw;
+	}
+	.readings {
+		width: 80vw;
+	}
+}

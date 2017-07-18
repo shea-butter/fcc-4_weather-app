@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Weather App</title>
+		<meta name="description" content="See your local weather or search weather by location or zip code.">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="styles/css/main.css">
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bellefair|Rakkas|Share">
+
+		<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+		<!--<script src="js/vendor/modernizr-2.8.3.min.js"></script>-->
+	</head>
+
+	<body>
+
+		<main>
+
+			<div class="locale">
+
+				<h1 class="location"></h1>
+
+				<div class="currentIcon">
+					<img class="currentWeatherIcon" src="#"/>
+				</div>
+
+				<div class="currentTemp">
+
+					<h1>
+						<strong class="currentDegrees"></strong>
+					</h1>
+
+					<div class="CurrentConditions">
+						<p class="feelslike"></p>
+						<p class="conditions"></p>
+					</div>
+
+				</div>
+
+				<button class="convert" onclick="weatherApp.toggleTempType()">Convert to &deg;C (Metric)</button>
+
+			</div>
+
+			<div class="readings">
+
+				<div class="readings-row1">
+					<div class="latitudeIcon"></div><p class="latitude"></p>
+					<div class="longitudeIcon"></div><p class="longitude"></p>
+				</div>
+
+				<div class="readings-row2">
+					<div class="elevationIcon"></div><p class="elevation"></p>
+					<div class="visibilityIcon"></div><p class="visibility"></p>
+				</div>
+
+				<div class="readings-row3">
+					<div class="precipitationIcon"></div><p class="precipitation"></p>
+					<div class="pressureIcon"></div><p class="pressure"></p>
+				</div>
+
+				<div class="readings-row4">
+					<div class="humidityIcon"></div><p class="humidity"></p>
+					<div class="dewpointIcon"></div><p class="dewpoint"></p>
+				</div>
+
+				<div class="readings-row5">
+					<div class="windIcon"></div><p class="wind"></p>
+					<div class="windchillIcon"></div><p class="windchill"></p>
+				</div>
+
+			</div>
+
+			<div class="search">
+
+				<form class="searchForm" name="searchForm" action="javascript: false";>
+					<input type="search" name="searchBox" placeholder="search location" required/>
+					<button type="submit" name="submitButton" onclick="weatherApp.setWeather()">Search</button>
+				</form>
+
+				<div class="searchRules">
+
+					<p>
+						You can search for a specific location above. <br>
+						Use one of the following formats:
+					</p>
+
+					<ul>
+						<li>
+							US State/City:
+							<br /> CA/San_Francisco
+						</li>
+						<li>
+							US Zipcode:
+							<br /> 60290
+						</li>
+						<li>
+							International Country/City:
+							<br /> Australia/Sydney
+						</li>
+						<li>
+							Latitude,Longitude:
+							<br /> 37.8,-122.4
+						</li>
+						<li>
+							Airport Code:
+							<br /> KJFK
+						</li>
+						<li>
+							Personal Weather Station id:
+							<br /> pws:KCASANFR70
+						</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+		</main>
+
+		<footer class="center right-0 bottom-0 left-0">
+			<div id="social-logos" class="col-xs-12">
+				<ul class="list-reset">
+					<li id="github" class="inline-block h2 ml1 mr1"><a href="https://github.com/sheafitzek" rel="noopener noreferrer" target="_blank"><i class="fa fa-github fa-fw " aria-hidden="true "></i></a></li>
+					<li id="codepen" class="inline-block h2 ml1 mr1"><a href="https://codepen.io/sheafitzek/" rel="noopener noreferrer" target="_blank"><i class="fa fa-codepen fa-fw " aria-hidden="true "></i></a></li>
+					<li id="linkedin" class="inline-block h2 ml1 mr1"><a href="https://www.linkedin.com/in/sheafitzek" rel="noopener noreferrer" target="_blank"><i class="fa fa-linkedin fa-fw " aria-hidden="true "></i></a></li>
+					<li id="twitter" class="inline-block h2 ml1 mr1"><a href="https://twitter.com/sheafitzek" rel="noopener noreferrer" target="_blank"><i class="fa fa-twitter fa-fw " aria-hidden="true "></i></a></li>
+					<li id="facebook" class="inline-block h2 ml1 mr1"><a href="https://www.facebook.com/shea.fitzek" rel="noopener noreferrer" target="_blank"><i class="fa fa-facebook fa-fw " aria-hidden="true "></i></a></li>
+					<li id="medium" class="inline-block h2 ml1 mr1"><a href="https://medium.com/@shea_butter" rel="noopener noreferrer" target="_blank"><i class="fa fa-medium fa-fw " aria-hidden="true "></i></a></li>
+					<li id="meetup" class="inline-block h2 ml1 mr1"><a href="https://www.meetup.com/members/209350641/" rel="noopener noreferrer" target="_blank"><i class="fa fa-meetup fa-fw " aria-hidden="true "></i></a></li>
+					<li id="slack" class="inline-block h2 ml1 mr1"><a href="https://sheafitzek.slack.com" rel="noopener noreferrer" target="_blank"><i class="fa fa-slack fa-fw " aria-hidden="true "></i></a></li>
+					<li id="trello" class="inline-block h2 ml1 mr1"><a href="https://trello.com/sheafitzek" rel="noopener noreferrer" target="_blank"><i class="fa fa-trello fa-fw " aria-hidden="true "></i></a></li>
+					<li id="free-code-camp" class="inline-block h2 ml1 mr1"><a href="https://www.freecodecamp.com/sheafitzek" rel="noopener noreferrer" target="_blank"><i class="fa fa-free-code-camp fa-fw " aria-hidden="true "></i></a></li>
+				</ul>
+			</div>
+
+			<p>© 2017 Shea Fitzek - All Rights Reserved | <span class="info" onclick="weatherApp.openModal()">page info</span></p>
+
+			<div class="modal" onclick="weatherApp.closeModal()">
+				<div class="modal-content">
+					<span class="close" onclick="weatherApp.closeModal()">&times;</span>
+					<p class="h2">This was coded as part of the FreeCodeCamp curriculum</p>
+					<p class="h2">Weather delivered by the <a href="https://wunderground.com" rel="noopener noreferrer" target="_blank">Wunderground</a> API</p>
+					<p class="h2">Secondary icons by <a href="https://icons8.com" rel="noopener noreferrer" target="_blank">Icons8</a></p>
+				</div>
+			</div>
+		</footer>
+
+		<pre class="ajax"></pre>
+
+		<script type="text/javascript" src="js/script.js"></script>
+
+	</body>
+
+</html>
