@@ -2,7 +2,7 @@
   "name": "fcc-4_weather-app",
   "version": "1.0.0",
   "description": "A Weather App",
-  "main": "index.js",
+  "main": "script.js",
   "scripts": {
     "deploy": "gh-pages -d /",
     "test": "echo \"Error: no test specified\" && exit 1"
